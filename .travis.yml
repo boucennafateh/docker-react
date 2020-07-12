@@ -18,5 +18,8 @@ deploy:
  app: "Docker"
  env: "Docker-env"
  bucket_name: "elasticbeanstalk-us-east-1-302962537892"
+ bucket_path: "Docker"
+ on:
+    branch: master
   
   
