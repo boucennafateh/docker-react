@@ -7,5 +7,18 @@ before_install:
 
 script:
  - docker run fate7/docker-react -e CI=true npm run test -- --coverage
+
+deploy:
+ provider: elasticbeanstalk
+ access_key_id: $AWS_access_key
+ secret_access_key:
+  secure: "$AWS_secret_key"
+ region: "us-east-1"
+ app: "Docker"
+ env: "Docker-env"
+ bucket_name: "elasticbeanstalk-us-east-1-302962537892"
+ bucket_path: "Docker"
+ on:
+  branch: master 
   
   
