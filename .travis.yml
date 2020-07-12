@@ -19,6 +19,7 @@ deploy:
  env: "Docker-env"
  bucket_name: "elasticbeanstalk-us-east-1-302962537892"
  bucket_path: "Docker"
+ skip_cleanup: true
  on:
     branch: master
   
